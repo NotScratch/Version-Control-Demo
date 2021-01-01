@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         MovePlayer();
         Jump();
+        Teleport();
     }
     void MovePlayer()
     {
@@ -42,4 +43,17 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+    
+    void Teleport()
+    {
+
+        Vector2 center = new Vector2(-1 * theRB2D.position.x, -1 * theRB2D.position.y);
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            theRB2D.MovePosition(center);
+
+        }
+
+    }
+    
 }
