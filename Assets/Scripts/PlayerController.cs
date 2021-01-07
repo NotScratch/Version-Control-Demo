@@ -7,23 +7,44 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     private bool canMove;
     private Rigidbody2D theRB2D;
+    public float dashForce;
+    public float flip;
+
+    public bool grounded;
+    public LayerMask whatIsGrd;
+    public Transform grdChecker;
+    public float grdCheckerRad;
+
+    public float airTime;
+    public float airTimeCounter;
+
     // Start is called before the first frame update 
     void Start()
     {
         theRB2D = GetComponent<Rigidbody2D>();
+        dashForce = 100;
+        flip = -1;
+
+
+        airTimeCounter = airTime;
     }
     // Update is called once per frame 
     void Update()
     {
+
         if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
         {
             canMove = true;
         }
+        Debug.Log(theRB2D.position.y);
     }
     private void FixedUpdate()
     {
+        grounded = Physics2D.OverlapCircle(grdChecker.position, grdCheckerRad, whatIsGrd);
+
         MovePlayer();
         Jump();
+
     }
     void MovePlayer()
     {
@@ -33,13 +54,34 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     void Jump()
     {
-
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (grounded == true)
         {
-            theRB2D.velocity = new Vector2(theRB2D.velocity.x, jumpForce);
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+            {
+                theRB2D.velocity = new Vector2(theRB2D.velocity.x, jumpForce);
+            }
+        }
 
+        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
+        {
+            if (airTimeCounter > 0)
+            {
+                theRB2D.velocity = new Vector2(theRB2D.velocity.x, jumpForce);
+                airTimeCounter -= Time.deltaTime;
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
+        {
+            airTimeCounter = 0;
+        }
+
+        if (grounded)
+        {
+            airTimeCounter = airTime;
         }
     }
 }

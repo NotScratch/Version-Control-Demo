@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 222477557}
   - component: {fileID: 222477558}
   - component: {fileID: 222477559}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 290271148}
   - component: {fileID: 290271149}
   - component: {fileID: 290271150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 298930500}
   - component: {fileID: 298930501}
   - component: {fileID: 298930502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1033,7 +1033,7 @@ GameObject:
   - component: {fileID: 422846048}
   - component: {fileID: 422846049}
   - component: {fileID: 422846050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1142,7 +1142,7 @@ GameObject:
   - component: {fileID: 429013525}
   - component: {fileID: 429013526}
   - component: {fileID: 429013527}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1332,7 +1332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430569330}
   - component: {fileID: 430569331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1370,7 +1370,7 @@ Transform:
   - {fileID: 1279107658}
   - {fileID: 273476960}
   m_Father: {fileID: 1178476910}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &430569331
 BoxCollider2D:
@@ -1820,7 +1820,7 @@ GameObject:
   - component: {fileID: 729036131}
   - component: {fileID: 729036132}
   - component: {fileID: 729036133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2163,7 +2163,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1699628473}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2183,7 +2184,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d5e44699d8c7f084c847688be8d643c3, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2228,6 +2229,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 5
+  dashForce: 0
+  flip: 0
+  grounded: 0
+  whatIsGrd:
+    serializedVersion: 2
+    m_Bits: 256
+  grdChecker: {fileID: 1699628473}
+  grdCheckerRad: 0.3
+  airTime: 0.1
+  airTimeCounter: 0
 --- !u!1 &913568812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2649,7 +2660,7 @@ GameObject:
   - component: {fileID: 1124752745}
   - component: {fileID: 1124752746}
   - component: {fileID: 1124752747}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2774,9 +2785,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1455414511}
   - {fileID: 1587349021}
   - {fileID: 430569330}
-  - {fileID: 1455414511}
   - {fileID: 1186041456}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -2791,7 +2802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186041456}
   - component: {fileID: 1186041457}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2858,7 +2869,7 @@ GameObject:
   - component: {fileID: 1195313863}
   - component: {fileID: 1195313864}
   - component: {fileID: 1195313865}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2967,7 +2978,7 @@ GameObject:
   - component: {fileID: 1213596232}
   - component: {fileID: 1213596233}
   - component: {fileID: 1213596234}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3322,7 +3333,7 @@ GameObject:
   - component: {fileID: 1337826129}
   - component: {fileID: 1337826130}
   - component: {fileID: 1337826131}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3595,7 +3606,7 @@ GameObject:
   - component: {fileID: 1395313806}
   - component: {fileID: 1395313807}
   - component: {fileID: 1395313808}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3704,7 +3715,7 @@ GameObject:
   - component: {fileID: 1401652386}
   - component: {fileID: 1401652387}
   - component: {fileID: 1401652388}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3813,7 +3824,7 @@ GameObject:
   - component: {fileID: 1434976538}
   - component: {fileID: 1434976539}
   - component: {fileID: 1434976540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4003,7 +4014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1455414511}
   - component: {fileID: 1455414512}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4031,7 +4042,7 @@ Transform:
   - {fileID: 238646312}
   - {fileID: 215547812}
   m_Father: {fileID: 1178476910}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1455414512
 BoxCollider2D:
@@ -4070,7 +4081,7 @@ GameObject:
   - component: {fileID: 1493371362}
   - component: {fileID: 1493371363}
   - component: {fileID: 1493371364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4179,7 +4190,7 @@ GameObject:
   - component: {fileID: 1499372707}
   - component: {fileID: 1499372708}
   - component: {fileID: 1499372709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4450,7 +4461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1587349021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4479,8 +4490,8 @@ Transform:
   - {fileID: 2009499011}
   - {fileID: 422846048}
   - {fileID: 1124752745}
-  - {fileID: 2076630185}
   - {fileID: 1995353618}
+  - {fileID: 2076630185}
   - {fileID: 1395313806}
   - {fileID: 1813786368}
   - {fileID: 1195313863}
@@ -4488,7 +4499,7 @@ Transform:
   - {fileID: 1434976538}
   - {fileID: 1493371362}
   m_Father: {fileID: 1178476910}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1615609770
 GameObject:
@@ -4654,6 +4665,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1699628472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1699628473}
+  m_Layer: 0
+  m_Name: grdChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1699628473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699628472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 867251894}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782255823
 GameObject:
   m_ObjectHideFlags: 0
@@ -4829,7 +4870,7 @@ GameObject:
   - component: {fileID: 1813786368}
   - component: {fileID: 1813786369}
   - component: {fileID: 1813786370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5266,7 +5307,7 @@ GameObject:
   - component: {fileID: 1995353618}
   - component: {fileID: 1995353619}
   - component: {fileID: 1995353620}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5285,7 +5326,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1587349021}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1995353619
 SpriteRenderer:
@@ -5375,7 +5416,7 @@ GameObject:
   - component: {fileID: 2009499011}
   - component: {fileID: 2009499012}
   - component: {fileID: 2009499013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5566,7 +5607,7 @@ GameObject:
   - component: {fileID: 2076630185}
   - component: {fileID: 2076630186}
   - component: {fileID: 2076630187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5585,7 +5626,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1587349021}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2076630186
 SpriteRenderer:
