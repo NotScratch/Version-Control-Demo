@@ -7,8 +7,6 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     private bool canMove;
     private Rigidbody2D theRB2D;
-    public float dashForce;
-    public float flip;
 
     public bool grounded;
     public LayerMask whatIsGrd;
@@ -18,12 +16,13 @@ public class PlayerController : MonoBehaviour
     public float airTime;
     public float airTimeCounter;
 
+    private Animator theAnimator;
+
     // Start is called before the first frame update 
     void Start()
     {
         theRB2D = GetComponent<Rigidbody2D>();
-        dashForce = 100;
-        flip = -1;
+        theAnimator = GetComponent<Animator>();
 
 
         airTimeCounter = airTime;
@@ -51,6 +50,14 @@ public class PlayerController : MonoBehaviour
         if (canMove)
         {
             theRB2D.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, theRB2D.velocity.y);
+
+
+            theAnimator.SetFloat("Speed", Mathf.Abs(theRB2D.velocity.x));
+
+            if (theRB2D.velocity.x > 0)
+                transform.localScale = new Vector2(1f, 1f);
+            else if (theRB2D.velocity.x < 0)
+                transform.localScale = new Vector2(-1f, 1f);
         }
     }
 
@@ -83,5 +90,7 @@ public class PlayerController : MonoBehaviour
         {
             airTimeCounter = airTime;
         }
+
+        theAnimator.SetBool("Grounded", grounded);
     }
 }
