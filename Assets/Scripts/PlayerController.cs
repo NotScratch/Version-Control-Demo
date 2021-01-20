@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
         {
             canMove = true;
         }
-        Debug.Log(theRB2D.position.y);
+       
     }
     private void FixedUpdate()
     {
@@ -93,4 +93,17 @@ public class PlayerController : MonoBehaviour
 
         theAnimator.SetBool("Grounded", grounded);
     }
+
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Spike")
+        {
+            Debug.Log("Ouch!");
+        }
+
+
+    }
+
+
 }
