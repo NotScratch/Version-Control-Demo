@@ -1242,7 +1242,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 331662524}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137104057}
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &331662524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2065,7 +2076,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &541812880
 GameObject:
@@ -2230,7 +2241,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 616503876}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1239276593}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &616503876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2708,7 +2730,7 @@ Transform:
   m_Children:
   - {fileID: 1699628473}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &867251895
 Rigidbody2D:
@@ -2725,7 +2747,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: d5e44699d8c7f084c847688be8d643c3, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2744,7 +2766,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.031198025, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2755,7 +2777,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8128109, y: 0.9821725}
   m_EdgeRadius: 0
 --- !u!114 &867251897
 MonoBehaviour:
@@ -2770,15 +2792,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 5
+  jumpForce: 10
   grounded: 0
   whatIsGrd:
     serializedVersion: 2
     m_Bits: 256
   grdChecker: {fileID: 1699628473}
   grdCheckerRad: 0.3
-  airTime: 0.5
+  airTime: 0.2
   airTimeCounter: 0
+  theGM: {fileID: 1738574819}
+  sprung: 0
+  whatIsSpr:
+    serializedVersion: 2
+    m_Bits: 512
+  teleport: 0
+  whatIsTp:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &867251898
 Animator:
   serializedVersion: 3
@@ -3357,7 +3388,7 @@ Transform:
   - {fileID: 287971074}
   - {fileID: 1719157223}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1186041455
 GameObject:
@@ -3506,7 +3537,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1189528668}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137104057}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1189528668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3856,6 +3898,7 @@ GameObject:
   - component: {fileID: 1239276591}
   - component: {fileID: 1239276590}
   - component: {fileID: 1239276589}
+  - component: {fileID: 1239276593}
   m_Layer: 5
   m_Name: GameOverScreen
   m_TagString: Untagged
@@ -3939,13 +3982,25 @@ RectTransform:
   - {fileID: 1741213963}
   - {fileID: 616503874}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1239276593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239276588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742c2f8a32474024bb691274b58e4f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1241258672
 GameObject:
   m_ObjectHideFlags: 0
@@ -4010,7 +4065,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1255065223
 GameObject:
@@ -6088,6 +6143,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1719157222}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1738574818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1738574820}
+  - component: {fileID: 1738574819}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1738574819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738574818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad4ad15ee43da72439ac5db60fe736b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePlayer: {fileID: 867251897}
+  victoryScreen: {fileID: 2137104052}
+  gameOverScreen: {fileID: 1239276588}
+--- !u!4 &1738574820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738574818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1741213962
 GameObject:
   m_ObjectHideFlags: 0
@@ -6169,7 +6270,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1741213965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1239276593}
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1741213965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7229,6 +7341,7 @@ GameObject:
   - component: {fileID: 2137104055}
   - component: {fileID: 2137104054}
   - component: {fileID: 2137104053}
+  - component: {fileID: 2137104057}
   m_Layer: 5
   m_Name: VictoryScreen
   m_TagString: Untagged
@@ -7318,6 +7431,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2137104057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137104052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742c2f8a32474024bb691274b58e4f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2143850490
 GameObject:
   m_ObjectHideFlags: 0
@@ -7412,6 +7537,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: goal pole
       objectReference: {fileID: 0}
+    - target: {fileID: 6677373549310601307, guid: 052e511ceee4d76449d4c5c24ea1a83e,
+        type: 3}
+      propertyPath: theGM
+      value: 
+      objectReference: {fileID: 1738574819}
     - target: {fileID: 7582466677535510307, guid: 052e511ceee4d76449d4c5c24ea1a83e,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -18,6 +18,17 @@ public class PlayerController : MonoBehaviour
 
     private Animator theAnimator;
 
+    public GameManager theGM;
+
+    //practice quiz stuff
+    public bool sprung;
+    public LayerMask whatIsSpr;
+
+    public bool teleport;
+    public LayerMask whatIsTp;
+    //practice quiz stuff
+
+
     // Start is called before the first frame update 
     void Start()
     {
@@ -44,6 +55,29 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
         Jump();
 
+
+
+        //quiz stuff
+        sprung = Physics2D.OverlapCircle(grdChecker.position, grdCheckerRad, whatIsSpr);
+        if (sprung == true)
+        {
+            theRB2D.velocity = new Vector2(theRB2D.velocity.x, 50);
+        }
+        
+        
+        teleport = Physics2D.OverlapCircle(grdChecker.position, grdCheckerRad, whatIsTp);
+        if (teleport == true)
+        {
+
+            Vector2 newpos = new Vector2(-7.5f, 3.5f);
+            theRB2D.MovePosition(newpos);
+
+
+        }
+
+
+
+        //quiz stuff
     }
     void MovePlayer()
     {
@@ -100,10 +134,21 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "Spike")
         {
             Debug.Log("Ouch!");
+            theGM.GameOver();
         }
 
 
     }
+
+
+
+
+
+
+
+
+
+
 
 
 }
