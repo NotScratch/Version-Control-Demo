@@ -796,7 +796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 273476960}
   - component: {fileID: 273476961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1761,7 +1761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429655696}
   - component: {fileID: 429655697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2001,7 +2001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 472174687}
   - component: {fileID: 472174688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2256,7 +2256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &616503874
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2378,7 +2378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699765366}
   - component: {fileID: 699765367}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2644,7 +2644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 827416810}
   - component: {fileID: 827416811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2726,7 +2726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 858746880}
   - component: {fileID: 858746881}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2955,14 +2955,6 @@ MonoBehaviour:
   airTime: 0.2
   airTimeCounter: 0
   theGM: {fileID: 1738574819}
-  sprung: 0
-  whatIsSpr:
-    serializedVersion: 2
-    m_Bits: 512
-  teleport: 0
-  whatIsTp:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!95 &867251898
 Animator:
   serializedVersion: 3
@@ -2992,7 +2984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 913568813}
   - component: {fileID: 913568814}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3074,7 +3066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 936413667}
   - component: {fileID: 936413668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3156,7 +3148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1013810304}
   - component: {fileID: 1013810305}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3271,7 +3263,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094ab33d7e7df384d8ac8e53ffe9630c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultLives: 3
   livesCounter: 0
   livesText: {fileID: 287881233}
 --- !u!1 &1076830596
@@ -3465,7 +3456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1090796147}
   - component: {fileID: 1090796148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4112,7 +4103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1236160210}
   - component: {fileID: 1236160211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4457,7 +4448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1279107658}
   - component: {fileID: 1279107659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4648,7 +4639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1344714319}
   - component: {fileID: 1344714320}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6010,7 +6001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1582974975}
   - component: {fileID: 1582974976}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6219,7 +6210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1615609771}
   - component: {fileID: 1615609772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6301,7 +6292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1651471311}
   - component: {fileID: 1651471312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6510,6 +6501,7 @@ MonoBehaviour:
   thePlayer: {fileID: 867251897}
   victoryScreen: {fileID: 2137104052}
   gameOverScreen: {fileID: 1239276588}
+  mainMenu: MainMenu
 --- !u!4 &1738574820
 Transform:
   m_ObjectHideFlags: 0
@@ -6542,7 +6534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1741213963
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6664,7 +6656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1782255824}
   - component: {fileID: 1782255825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6746,7 +6738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1797039716}
   - component: {fileID: 1797039717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6937,7 +6929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1830823721}
   - component: {fileID: 1830823722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8105,7 +8097,7 @@ PrefabInstance:
     - target: {fileID: 1561251701405282756, guid: b49b210a9cf228e448308c793abb2513,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1561251701405282756, guid: b49b210a9cf228e448308c793abb2513,
         type: 3}
