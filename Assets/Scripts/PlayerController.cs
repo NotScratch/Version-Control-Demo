@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
+    public float dfltSpeed;
     public float jumpForce;
     private bool canMove;
     private Rigidbody2D theRB2D;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
         theRB2D = GetComponent<Rigidbody2D>();
         theAnimator = GetComponent<Animator>();
         airTimeCounter = airTime;
+        dfltSpeed = speed;
     }
     // Update is called once per frame
     void Update()
@@ -45,9 +47,9 @@ public class PlayerController : MonoBehaviour
             theRB2D.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed,
             theRB2D.velocity.y);
             theAnimator.SetFloat("Speed", Mathf.Abs(theRB2D.velocity.x));
+
             if (theRB2D.velocity.x > 0)
                 transform.localScale = new Vector2(1f, 1f);
-
             else if (theRB2D.velocity.x < 0)
                 transform.localScale = new Vector2(-1f, 1f);
         }
