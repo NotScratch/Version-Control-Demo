@@ -19,8 +19,10 @@ public class GroundPatrol : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        int layerMask = 1 << 9;
+        layerMask = ~layerMask;
         RaycastHit2D contactCheck = Physics2D.Raycast(contactChecker.position, Vector2.left,
-        rayLength);
+        rayLength, layerMask);
         Debug.DrawRay(contactChecker.position, Vector2.left * rayLength, Color.red);
         if (contactCheck == true)
         {
