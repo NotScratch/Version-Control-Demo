@@ -29,7 +29,8 @@ public class EnemyHP : MonoBehaviour
             parentCol.enabled = false;
             hurtboxCol.enabled = false;
             StartCoroutine("KillSwitch");
-            //Destroy(transform.parent.gameObject);
+            //Destroy(Transform.gameobject.bosseye);
+               
         }
     }
     public void TakeDamage(int damage)
