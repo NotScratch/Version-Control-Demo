@@ -18,11 +18,13 @@ public class SineMovement : MonoBehaviour
         {
             movePos.x = startPos.x + Mathf.Sin(Time.time * moveFreq) * moveDis;
             transform.position = new Vector2(movePos.x, transform.position.y);
+           
         }
         else
         {
             movePos.y = startPos.y + Mathf.Sin(Time.time * moveFreq) * moveDis;
             transform.position = new Vector2(transform.position.x, movePos.y);
+        
         }
     }
 }

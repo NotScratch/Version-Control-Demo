@@ -7405,5 +7405,15 @@ PrefabInstance:
       propertyPath: theGM
       value: 
       objectReference: {fileID: 1738574819}
+    - target: {fileID: 6437826039490530734, guid: 56f78e363a371dc42b1875f0d73d1ac4,
+        type: 3}
+      propertyPath: shockForce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437826041508410848, guid: 56f78e363a371dc42b1875f0d73d1ac4,
+        type: 3}
+      propertyPath: bounceForce
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56f78e363a371dc42b1875f0d73d1ac4, type: 3}
